@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+        <div class="container mt-5">
+        <div class="jumbotron">
+            <h1 class="text-center mb-5 mt-3">{{ events.name }}</h1>
+            <img src="{{ events.image }}" class="mb-5"style="width:100%;">
+            <p>Date: {{ events.time|date('j.m.Y, G:i') }}</p>
+            <p>Capacity: {{ events.capacity }}</p>
+            <p>{{ events.description }}</p>
+            <h5 class="mb-1 mt-5">Contact:</h5>
+            <p>{{ events.address }}</p>
+            <p>E-Mail: {{ events.email }}</p>
+            <p class="mb-5">Tel: {{ events.phonenumber }}</p>
+            <a href="{{ events.url }}" class="btn btn-danger" target="_blank">Go to site</a>
+            <a href="/edit/{{ events.id }}" class="btn btn-danger">Edit</a>
+            <a href="/delete/{{ events.id }}" class="btn btn-danger">Delete</a>
+        </div>
+    </div>
+{% endblock  %}

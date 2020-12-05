@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <div class="container mt-5">
+        <div class="jumbotron">
+            <h2 class="text-center mb-5 mt-3">Edit Event</h2>
+            <div class="d-flex justify-content-center">
+                <div style="width:80%">
+                    {{form_start(form)}}
+                    {{form_widget(form)}}
+                    {{form_end(form)}}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock  %}
